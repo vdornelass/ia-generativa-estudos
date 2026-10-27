@@ -1,0 +1,18 @@
+# SDKs de LLMs
+openai>=1.50.0
+google-genai>=1.0.0
+anthropic>=0.39.0
+
+# Frameworks de Agentes e Orquestração
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langchain-google-genai>=2.0.0
+
+# Validação, Dados e Ambiente
+pydantic>=2.9.0
+python-dotenv>=1.0.1
+
+# Notebooks Interativos
+jupyterlab>=4.2.0
+ipykernel>=6.29.0
