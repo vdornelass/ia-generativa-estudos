@@ -7,7 +7,7 @@
 
 Domine os fundamentos de LLMs, engenharia de prompt, pipelines de RAG, protocolo MCP e arquiteturas de agentes autônomos. Estude a teoria no NotebookLM, implemente cada conceito em código e registre evidências práticas.
 
-**[Começar a estudar](#rotas-de-estudo)** · **[Roadmaps visuais](#roadmaps-visuais)** · **[Caderno NotebookLM](#notebooklm)** · **[Desafios de projeto](#desafios-de-projeto)** · **[Explorar o currículo](#curriculo)**
+**[Começar a estudar](#rotas-de-estudo)** · **[Roadmaps visuais](#roadmaps-visuais)** · **[Caderno NotebookLM](#notebooklm)** · **[Explorar o currículo](#curriculo)**
 
 Aberto, estruturado em português (PT-BR) e orientado à prática. Estude pelos roadmaps visuais, com tutoria no NotebookLM ou rodando código local.
 
@@ -90,58 +90,6 @@ Este repositório mantém uma pasta dedicada ([`notebooklm/`](notebooklm/)) com 
 2. **Implemente em código** dentro de [`exemplos-codigo/`](exemplos-codigo/) em vez de apenas ler sobre a técnica.
 3. **Teste casos de borda**: mude parâmetros (`temperature`, `top_p`, schema JSON, falhas de tools) e observe onde o modelo quebra.
 4. **Guarde a evidência**: salve o notebook/script, a saída obtida e marque o tópico como concluído no `.excalidraw`.
-
-</details>
-
----
-
-<a id="desafios-de-projeto"></a>
-
-## Desafios de projeto
-
-Quatro projetos progressivos em [`projetos/`](projetos/) para consolidar cada camada da pilha — da extração estruturada até sistemas multiagentes com observabilidade.
-
-<details>
-<summary><strong>01 · Chatbot com Memória Dual</strong> · Python · Curto prazo no prompt + Longo prazo persistido</summary>
-<br/>
-
-Construa um assistente conversacional que mantém janela deslizante das mensagens recentes (curto prazo), extrai fatos relevantes do perfil do usuário em JSON estruturado e consulta memórias antigas por similaridade (longo prazo).
-
-- **Fases exigidas**: [Fase 03](#fase-3), [Fase 04](#fase-4) e [Fase 09](#fase-9).
-- **Evidência para manter**: script funcional, schema de memória do usuário e teste demonstrando recuperação de contexto após limpar a sessão.
-
-</details>
-
-<details>
-<summary><strong>02 · Runtime de Agente com Ferramentas (Do Zero)</strong> · Python · Loop ReAct e Tool Calling nativo</summary>
-<br/>
-
-Implemente o loop completo do agente (`Percepção → Raciocínio → Ação → Observação`) sem frameworks, conectando busca na web, execução de cálculos e chamadas a APIs externas com validação de schema e recuperação de erros.
-
-- **Fases exigidas**: [Fase 06](#fase-6), [Fase 07](#fase-7) e [Fase 08](#fase-8).
-- **Evidência para manter**: implementação manual do loop, definição das tools e log completo das iterações do agente.
-
-</details>
-
-<details>
-<summary><strong>03 · Agente RAG sobre Documentos</strong> · Python · Chunking, Vector DB e Citação Verificável</summary>
-<br/>
-
-Construa um pipeline de Agentic RAG capaz de indexar documentos PDF/Markdown, decidir quando consultar a base vetorial, reformular queries ambíguas e responder exclusivamente com base nas fontes recuperadas.
-
-- **Fases exigidas**: [Fase 02](#fase-2), [Fase 09](#fase-9) e [Fase 10](#fase-10).
-- **Evidência para manter**: pipeline de ingestão, busca vetorial e bateria de avaliação de fidelidade (*faithfulness*).
-
-</details>
-
-<details>
-<summary><strong>04 · Sistema Multiagente em Grafo</strong> · Python & LangGraph · Planejador, Executor, Reflexão e Tracing</summary>
-<br/>
-
-Orquestre um grafo de estado explícito (`StateGraph`) onde um agente planejador decompõe uma tarefa complexa, delega para nós especialistas, passa por um nó revisor/crítico com *Human-in-the-Loop* e registra traces completos.
-
-- **Fases exigidas**: [Fase 10](#fase-10), [Fase 11](#fase-11), [Fase 12](#fase-12) e [Fase 13](#fase-13).
-- **Evidência para manter**: definição do grafo no LangGraph, visualização da trajetória e relatório de latência/tokens.
 
 </details>
 
